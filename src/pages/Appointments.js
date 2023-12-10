@@ -21,10 +21,6 @@ function Appointments() {
           },
         }
       );
-      console.log(
-        "🚀 ~ file: Appointments.js:24 ~ getAppointmentsData ~ resposne:",
-        resposne.data.data
-      );
       dispatch(hideLoading());
       if (resposne.data.success) {
         setAppointments(resposne.data.data);

@@ -93,7 +93,6 @@ export const HttpRequest = {
     return request().delete(`${BASE_URL}${APIs.deletePatientApi}${id}`);
   },
   searchPatientByNameApi(query) {
-    console.log();
     return request().get(`${BASE_URL}${APIs.searchPatientByNameApi}${query}`);
   },
   searchPatientByPhoneApi(query) {

@@ -16,10 +16,7 @@ function Register() {
         "http://localhost:8000/api/user/register",
         values
       );
-      console.log(
-        "🚀 ~ file: Register.js:16 ~ onFinish ~ response:",
-        response.data
-      );
+
       dispatch(hideLoading());
       if (response.data.success) {
         toast.success(response.data.message);

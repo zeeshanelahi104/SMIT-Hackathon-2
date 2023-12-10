@@ -39,7 +39,6 @@ function BookAppointment() {
         setDoctor(response.data.data);
       }
     } catch (error) {
-      console.log(error);
       dispatch(hideLoading());
     }
   };

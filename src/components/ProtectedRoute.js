@@ -22,10 +22,7 @@ function ProtectedRoute(props) {
           },
         }
       );
-      console.log(
-        "🚀 ~ file: ProtectedRoute.js:25 ~ getUser ~ response:",
-        response
-      );
+
       dispatch(hideLoading());
       if (response.data.success) {
         dispatch(setUser(response.data.data));
@@ -34,7 +31,6 @@ function ProtectedRoute(props) {
         navigate("/login");
       }
     } catch (error) {
-      console.log("🚀 ~ file: ProtectedRoute.js:37 ~ getUser ~ error:", error);
       dispatch(hideLoading());
       localStorage.clear();
       navigate("/login");

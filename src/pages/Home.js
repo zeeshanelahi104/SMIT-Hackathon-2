@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { showLoading, hideLoading } from "../redux/alertsSlice";
 function Home() {
   const [doctors, setDoctors] = useState([]);
-  console.log("🚀 ~ file: Home.js:10 ~ Home ~ doctors:", doctors);
   const dispatch = useDispatch();
   const getData = async () => {
     try {
@@ -20,7 +19,6 @@ function Home() {
           },
         }
       );
-      console.log("🚀 ~ file: Home.js:22 ~ getData ~ response:", response.data);
       dispatch(hideLoading());
       if (response.data.success) {
         setDoctors(response.data.data);
